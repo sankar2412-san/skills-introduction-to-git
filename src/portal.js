@@ -1,5 +1,3 @@
-/* global portal.js */
-
 // =====================================================
 //  24/7 Project Management Portal — JavaScript
 // =====================================================
@@ -104,8 +102,17 @@ function updateClock() {
 
 function highlightToday() {
   const today  = new Date().getDay(); // 0 = Sun … 6 = Sat
-  // Column indices in the table:  0=Shift,1=Time,2=Mon,3=Tue,4=Wed,5=Thu,6=Fri,7=Sat,8=Sun
-  const colMap = { 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 0: 8 }; // JS day → table col index
+  // Table column indices: 0=Shift label, 1=Time, 2=Mon, 3=Tue, 4=Wed, 5=Thu, 6=Fri, 7=Sat, 8=Sun
+  // JS Date.getDay() returns 0=Sun, 1=Mon … 6=Sat — map each to the matching table column.
+  const colMap = {
+    1: 2, // Monday    → column 2
+    2: 3, // Tuesday   → column 3
+    3: 4, // Wednesday → column 4
+    4: 5, // Thursday  → column 5
+    5: 6, // Friday    → column 6
+    6: 7, // Saturday  → column 7
+    0: 8, // Sunday    → column 8
+  };
   const col    = colMap[today];
   if (!col) return;
 
