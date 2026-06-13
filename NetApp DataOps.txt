@@ -1,0 +1,45 @@
+NetApp DataOps Toolkit
+======================
+
+Introduction
+------------
+The NetApp DataOps Toolkit is a Python-based tool that simplifies the
+management of development/training workspaces and inference servers that
+are backed by high-performance, scale-out NetApp storage. It enables
+developers, data scientists, DevOps engineers, and data engineers to
+perform powerful data management tasks—such as provisioning a new data
+volume, near-instantaneously cloning a data volume, and near-instantaneously
+taking a snapshot of a data volume for traceability or backup—with just a
+single, simple command.
+
+Key Capabilities
+----------------
+- Rapidly provision new high-performance storage volumes.
+- Near-instantaneously clone volumes to enable fast, space-efficient
+  experimentation and dataset versioning.
+- Near-instantaneously snapshot volumes for data protection, traceability,
+  and reproducibility of datasets and models.
+- Streamline data movement between environments and tiers.
+
+Editions
+--------
+The toolkit is available in two editions:
+- DataOps Toolkit for Kubernetes: integrates with Kubernetes-based
+  workflows and orchestrators (for example, Kubeflow).
+- DataOps Toolkit for Traditional environments: for non-Kubernetes,
+  command-line and Python-library use cases.
+
+How It Is Used
+--------------
+The toolkit can be used either as a command-line utility or imported as a
+library of functions directly within Python programs and Jupyter notebooks,
+making it easy to embed data management operations into automated pipelines.
+
+Benefits
+--------
+- Accelerates data science and DevOps workflows.
+- Improves reproducibility and traceability of data and models.
+- Reduces the time and storage cost of working with large datasets.
+
+For more information, see the official project repository:
+https://github.com/NetApp/netapp-dataops-toolkit
