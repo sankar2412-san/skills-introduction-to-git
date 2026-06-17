@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>24/7 Project Management Portal</title>
+    <link rel="stylesheet" href="portal.css" />
+  </head>
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="header-brand">
+          <span class="header-icon">🏗️</span>
+          <div>
+            <h1>24/7 Project Portal</h1>
+            <p class="header-tagline">Continuous Operations · 15 Members · 3 Shifts</p>
+          </div>
+        </div>
+        <div class="header-clock">
+          <div class="clock-time" id="clockTime">--:--:--</div>
+          <div class="clock-date" id="clockDate">Loading…</div>
+          <div class="clock-shift" id="clockShift">Detecting shift…</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== STATS BAR ===== -->
+    <section class="stats-bar">
+      <div class="stat-card">
+        <span class="stat-number">24</span>
+        <span class="stat-label">Hours / Day</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">15</span>
+        <span class="stat-label">Team Members</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">3</span>
+        <span class="stat-label">Shifts / Day</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">5</span>
+        <span class="stat-label">Members / Shift</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">7</span>
+        <span class="stat-label">Days / Week</span>
+      </div>
+    </section>
+
+    <!-- ===== SHIFT CARDS ===== -->
+    <section class="section">
+      <h2 class="section-title">🔄 Shift Overview</h2>
+      <p class="section-sub">Each shift runs 8 hours with a dedicated team of 5 members — coverage includes weekends.</p>
+      <div class="shifts-grid">
+
+        <!-- SHIFT 1 — Morning -->
+        <div class="shift-card shift-morning" id="shift-morning">
+          <div class="shift-header">
+            <span class="shift-emoji">🌅</span>
+            <div>
+              <h3 class="shift-title">Morning Shift</h3>
+              <p class="shift-time">06:00 AM — 02:00 PM</p>
+            </div>
+            <span class="shift-badge badge-morning">Shift 1</span>
+          </div>
+          <div class="shift-desc">Early starters who kick-off the day's deliverables and sync with overnight progress.</div>
+          <div class="members-grid">
+            <div class="member-chip">
+              <span class="member-avatar">👤</span>
+              <div class="member-info">
+                <span class="member-name">Alice Johnson</span>
+                <span class="member-role">Team Lead</span>
+              </div>
+            </div>
+            <div class="member-chip">
+              <span class="member-avatar">👤</span>
+              <div class="member-info">
+                <span class="member-name">Bob Martinez</span>
+                <span class="member-role">Developer</span>
+              </div>
+            </div>
+            <div class="member-chip">
+              <span class="member-avatar">👤</span>
+              <div class="member-info">
+                <span class="member-name">Carol Lee</span>
+                <span class="member-role">QA Engineer</span>
+              </div>
+            </div>
+            <div class="member-chip">
+              <span class="member-avatar">👤</span>
+              <div class="member-info">
+                <span class="member-name">David Singh</span>
+                <span class="member-role">DevOps</span>
+              </div>
+            </div>
+            <div class="member-chip">
+              <span class="member-avatar">👤</span>
+              <div class="member-info">
+                <span class="member-name">Eva Chen</span>
+                <span class="member-role">Designer</span>
+              </div>
+            </div>
+          </div>
+          <div class="shift-active-banner" id="banner-morning">⚡ Currently Active</div>
+        </div>
+
+        <!-- SHIFT 2 — Evening -->
+        <div class="shift-card shift-evening" id="shift-evening">
+          <div class="shift-header">
+            <span class="shift-emoji">🌇</span>
+            <div>
+              <h3 class="shift-title">Evening Shift</h3>
+              <p class="shift-time">02:00 PM — 10:00 PM</p>
+            </div>
+            <span class="shift-badge badge-evening">Shift 2</span>
+          </div>
+          <div class="shift-desc">Afternoon crew handling peak-hour tasks, client updates, and mid-project reviews.</div>
+          <div class="members-grid">
+            <div class="member-chip">
+              <span class="member-avatar">👤</span>
+              <div class="member-info">
+                <span class="member-name">Frank Okafor</span>
+                <span class="member-role">Team Lead</span>
+              </div>
+            </div>
+            <div class="member-chip">
+              <span class="member-avatar">👤</span>
+              <div class="member-info">
+                <span class="member-name">Grace Kim</span>
+                <span class="member-role">Developer</span>
+              </div>
+            </div>
+            <div class="member-chip">
+              <span class="member-avatar">👤</span>
+              <div class="member-info">
+                <span class="member-name">Henry Patel</span>
+                <span class="member-role">QA Engineer</span>
+              </div>
+            </div>
+            <div class="member-chip">
+              <span class="member-avatar">👤</span>
+              <div class="member-info">
+                <span class="member-name">Irene Torres</span>
+                <span class="member-role">Analyst</span>
+              </div>
+            </div>
+            <div class="member-chip">
+              <span class="member-avatar">👤</span>
+              <div class="member-info">
+                <span class="member-name">James Nguyen</span>
+                <span class="member-role">Backend Dev</span>
+              </div>
+            </div>
+          </div>
+          <div class="shift-active-banner" id="banner-evening">⚡ Currently Active</div>
+        </div>
+
+        <!-- SHIFT 3 — Night -->
+        <div class="shift-card shift-night" id="shift-night">
+          <div class="shift-header">
+            <span class="shift-emoji">🌙</span>
+            <div>
+              <h3 class="shift-title">Night Shift</h3>
+              <p class="shift-time">10:00 PM — 06:00 AM</p>
+            </div>
+            <span class="shift-badge badge-night">Shift 3</span>
+          </div>
+          <div class="shift-desc">Night owls ensuring round-the-clock availability and automated-task monitoring.</div>
+          <div class="members-grid">
+            <div class="member-chip">
+              <span class="member-avatar">👤</span>
+              <div class="member-info">
+                <span class="member-name">Karen Blake</span>
+                <span class="member-role">Team Lead</span>
+              </div>
+            </div>
+            <div class="member-chip">
+              <span class="member-avatar">👤</span>
+              <div class="member-info">
+                <span class="member-name">Leo Ramirez</span>
+                <span class="member-role">Developer</span>
+              </div>
+            </div>
+            <div class="member-chip">
+              <span class="member-avatar">👤</span>
+              <div class="member-info">
+                <span class="member-name">Mia Hoffmann</span>
+                <span class="member-role">SRE</span>
+              </div>
+            </div>
+            <div class="member-chip">
+              <span class="member-avatar">👤</span>
+              <div class="member-info">
+                <span class="member-name">Noah Williams</span>
+                <span class="member-role">Security Eng</span>
+              </div>
+            </div>
+            <div class="member-chip">
+              <span class="member-avatar">👤</span>
+              <div class="member-info">
+                <span class="member-name">Olivia Brown</span>
+                <span class="member-role">Data Analyst</span>
+              </div>
+            </div>
+          </div>
+          <div class="shift-active-banner" id="banner-night">⚡ Currently Active</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== WEEKLY SCHEDULE ===== -->
+    <section class="section">
+      <h2 class="section-title">📅 Weekly Shift Schedule</h2>
+      <p class="section-sub">Coverage every day — including Saturday &amp; Sunday.</p>
+      <div class="schedule-wrapper">
+        <table class="schedule-table" id="scheduleTable">
+          <thead>
+            <tr>
+              <th>Shift</th>
+              <th>Time</th>
+              <th>Monday</th>
+              <th>Tuesday</th>
+              <th>Wednesday</th>
+              <th>Thursday</th>
+              <th>Friday</th>
+              <th class="weekend">Saturday</th>
+              <th class="weekend">Sunday</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="row-morning">
+              <td><span class="dot dot-morning"></span> Morning</td>
+              <td>06:00–14:00</td>
+              <td>Alice, Bob,<br/>Carol, David,<br/>Eva</td>
+              <td>Alice, Bob,<br/>Carol, David,<br/>Eva</td>
+              <td>Alice, Bob,<br/>Carol, David,<br/>Eva</td>
+              <td>Alice, Bob,<br/>Carol, David,<br/>Eva</td>
+              <td>Alice, Bob,<br/>Carol, David,<br/>Eva</td>
+              <td class="weekend">Alice, Bob,<br/>Carol, David,<br/>Eva</td>
+              <td class="weekend">Alice, Bob,<br/>Carol, David,<br/>Eva</td>
+            </tr>
+            <tr class="row-evening">
+              <td><span class="dot dot-evening"></span> Evening</td>
+              <td>14:00–22:00</td>
+              <td>Frank, Grace,<br/>Henry, Irene,<br/>James</td>
+              <td>Frank, Grace,<br/>Henry, Irene,<br/>James</td>
+              <td>Frank, Grace,<br/>Henry, Irene,<br/>James</td>
+              <td>Frank, Grace,<br/>Henry, Irene,<br/>James</td>
+              <td>Frank, Grace,<br/>Henry, Irene,<br/>James</td>
+              <td class="weekend">Frank, Grace,<br/>Henry, Irene,<br/>James</td>
+              <td class="weekend">Frank, Grace,<br/>Henry, Irene,<br/>James</td>
+            </tr>
+            <tr class="row-night">
+              <td><span class="dot dot-night"></span> Night</td>
+              <td>22:00–06:00</td>
+              <td>Karen, Leo,<br/>Mia, Noah,<br/>Olivia</td>
+              <td>Karen, Leo,<br/>Mia, Noah,<br/>Olivia</td>
+              <td>Karen, Leo,<br/>Mia, Noah,<br/>Olivia</td>
+              <td>Karen, Leo,<br/>Mia, Noah,<br/>Olivia</td>
+              <td>Karen, Leo,<br/>Mia, Noah,<br/>Olivia</td>
+              <td class="weekend">Karen, Leo,<br/>Mia, Noah,<br/>Olivia</td>
+              <td class="weekend">Karen, Leo,<br/>Mia, Noah,<br/>Olivia</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== TIMELINE ===== -->
+    <section class="section">
+      <h2 class="section-title">⏱️ 24-Hour Timeline</h2>
+      <p class="section-sub">Visual representation of shift handovers across the full day.</p>
+      <div class="timeline-container">
+        <div class="timeline-bar">
+          <div class="tl-segment tl-morning" style="width:33.33%">
+            <span class="tl-label">🌅 Morning<br/>06:00–14:00</span>
+          </div>
+          <div class="tl-segment tl-evening" style="width:33.33%">
+            <span class="tl-label">🌇 Evening<br/>14:00–22:00</span>
+          </div>
+          <div class="tl-segment tl-night" style="width:33.34%">
+            <span class="tl-label">🌙 Night<br/>22:00–06:00</span>
+          </div>
+        </div>
+        <div class="timeline-hours">
+          <span>00</span><span>02</span><span>04</span>
+          <span>06</span><span>08</span><span>10</span>
+          <span>12</span><span>14</span><span>16</span>
+          <span>18</span><span>20</span><span>22</span>
+          <span>24</span>
+        </div>
+        <div class="tl-indicator-wrap">
+          <div class="tl-indicator" id="tlIndicator"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MEMBER DIRECTORY ===== -->
+    <section class="section">
+      <h2 class="section-title">👥 Full Team Directory</h2>
+      <p class="section-sub">All 15 members across the three shifts at a glance.</p>
+      <div class="directory-grid" id="directoryGrid"></div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+      <p>🏗️ 24/7 Project Management Portal &nbsp;|&nbsp; 15 Members &nbsp;·&nbsp; 3 Shifts &nbsp;·&nbsp; Always On</p>
+    </footer>
+
+    <script src="portal.js"></script>
+  </body>
+</html>
